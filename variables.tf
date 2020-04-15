@@ -1,6 +1,6 @@
 variable "prefix" {
   description = "Naamgeving voor de verschillende resources die aangemaakt worden"
-  default = "PoC5"
+  default = "db-pgsql-toes"
 }
 
 variable "location" {
