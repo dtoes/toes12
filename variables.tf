@@ -5,12 +5,12 @@ variable "prefix" {
 
 variable "location" {
   description = "Welke Azure region moet er gebruikt worden"
-  default = "westeurope"
+  default = "eastus"
 }
 
 variable "omgeving" {
   description = "Soort omgeving zoals test,dev of productie"
-  default = "Test"
+  default = "database"
 }
 
 variable "gebruikersnaam" {
