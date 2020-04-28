@@ -27,6 +27,7 @@ resource "azurerm_postgresql_server" "example" {
   tags = {
     environment = "${var.omgeving}"
 }
+}
 
 resource "azurerm_postgresql_database" "example" {
   name                = "db-toes2"
