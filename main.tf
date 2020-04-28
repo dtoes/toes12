@@ -38,3 +38,4 @@ resource "azurerm_postgresql_database" "example" {
   tags = {
     environment = "${var.omgeving}"
 }
+}
