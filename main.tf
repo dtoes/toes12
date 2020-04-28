@@ -7,7 +7,7 @@ resource "azurerm_resource_group" "main" {
 }
 
 resource "azurerm_postgresql_server" "example" {
-  name                = "pgrsql-srvr-toes1"
+  name                = "pgrsql-srvr-toes2"
   location            = azurerm_resource_group.main.location
   resource_group_name = azurerm_resource_group.main.name
 
@@ -23,12 +23,18 @@ resource "azurerm_postgresql_server" "example" {
   administrator_login_password = var.wachtwoord
   version                      = "9.5"
   ssl_enforcement              = "Enabled"
+
+  tags = {
+    environment = "${var.omgeving}"
 }
 
 resource "azurerm_postgresql_database" "example" {
-  name                = "db-toes1"
+  name                = "db-toes2"
   resource_group_name = azurerm_resource_group.main.name
   server_name         = azurerm_postgresql_server.example.name
   charset             = "UTF8"
   collation           = "English_United States.1252"
+  
+  tags = {
+    environment = "${var.omgeving}"
 }
